@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Unidad_1.U1_ConversionesRPE">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spnConvertirDe">
+            </Spinner>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="100sp"
+                    android:text="["/>
+
+                <TextView
+                    android:id="@+id/verR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="60sp"
+                    android:text=""/>
+
+                <EditText
+                    android:id="@+id/txtA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="60sp"
+                    android:layout_marginRight="2mm"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:hint="#" />
+
+                <TextView
+                    android:id="@+id/verAng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="60sp"
+                    android:text=""/>
+
+                <EditText
+                    android:id="@+id/txtB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="60sp"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:hint="#" />
+
+                <TextView
+                    android:id="@+id/verI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="80sp"
+                    android:text="i" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/llavecerrada"
+                    android:textStyle="bold"
+                    android:textSize="100sp"
+                    android:text="]"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnConvertir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convertir"
+                android:textAllCaps="false"
+                android:textSize="5mm"
+                android:layout_margin="2mm"
+                android:enabled="false"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtResultadoREC"
+                android:hint="Rectangular"
+                android:textAlignment="center"
+                android:layout_margin="2mm"
+                android:background="#ff9999"
+                android:enabled="false"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtResultadoPOL"
+                android:hint="Polar"
+                android:textAlignment="center"
+                android:layout_margin="2mm"
+                android:background="#51008e"
+                android:enabled="false"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtResultadoEXP"
+                android:hint="Exponencial"
+                android:textAlignment="center"
+                android:layout_margin="2mm"
+                android:background="#000000"
+                android:enabled="false"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

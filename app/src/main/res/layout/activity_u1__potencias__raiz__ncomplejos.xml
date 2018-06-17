@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Unidad_1.U1_Potencias_Raiz_NComplejos">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spnConvertirDe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="["
+                    android:textStyle="bold"
+                    android:textSize="70sp" />
+
+                <TextView
+                    android:id="@+id/verR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="50sp" />
+
+                <EditText
+                    android:id="@+id/txtA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2mm"
+                    android:hint="#"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:textStyle="bold"
+                    android:textSize="50sp"/>
+
+                <TextView
+                    android:id="@+id/verAng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="50sp"/>
+
+                <EditText
+                    android:id="@+id/txtB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="#"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:textStyle="bold"
+                    android:textSize="50sp"/>
+
+                <TextView
+                    android:id="@+id/verI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="i"
+                    android:textStyle="bold"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:id="@+id/llavecerradapr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="]"
+                    android:textStyle="bold"
+                    android:textSize="70sp"/>
+
+                <EditText
+                    android:id="@+id/txtN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="n"
+                    android:inputType="numberSigned"
+                    android:text="1"
+                    android:textStyle="bold"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnConvertir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2mm"
+                android:enabled="false"
+                android:text="Calcular"
+                android:textAllCaps="false"
+                android:textSize="5mm" />
+
+            <EditText
+                android:id="@+id/txtResultadoPotencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2mm"
+                android:background="#b49f00"
+                android:enabled="false"
+                android:hint="Potencia"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textStyle="bold"
+                android:textSize="50sp" />
+
+            <EditText
+                android:id="@+id/txtResultadoRaiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2mm"
+                android:background="#940007"
+                android:enabled="false"
+                android:hint="Raíz"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textStyle="bold"
+                android:textSize="50sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

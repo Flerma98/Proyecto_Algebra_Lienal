@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity">
+    <item
+        android:id="@+id/action_acercademi"
+        android:orderInCategory="100"
+        android:title="Acerca de mi"
+        app:showAsAction="never" />
+</menu>
