@@ -19,6 +19,8 @@ import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
 
 import java.util.ArrayList;
 
+import Jama.Matrix;
+
 public class U2_Operaciones_Matrices extends AppCompatActivity {
 
     private EditText txtF1, txtC1, txtF2, txtC2;
@@ -105,29 +107,28 @@ public class U2_Operaciones_Matrices extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    //Tabla1
-                    int contador1 = 0;
-                    String[][] result1 = adapter1.getData();
-                    double[][] matriz1 = new double[result1.length][result1[0].length];
-                    for (int i = 0; i < result1.length; i++) {
-                        for (int j = 0; j < result1.length; j++) {
-                            ConstraintLayout rootView1 = (ConstraintLayout) recycler1.getChildAt(contador1++);
-                            matriz1[i][j] = Double.parseDouble(((EditText) rootView1.findViewById(R.id.txtListaRecycler)).getText().toString());
-                        }
-                    }
-                        //Tabla2
-                        int contador2 = 0;
-                        String[][] result2 = adapter2.getData();
-                        double[][] matriz2 = new double[result2.length][result2[0].length];
-                        for (int i = 0; i < result2.length; i++) {
-                            for (int j = 0; j < result2.length; j++) {
-                                ConstraintLayout rootView2 = (ConstraintLayout) recycler2.getChildAt(contador2++);
-                                matriz2[i][j] = Double.parseDouble(((EditText) rootView2.findViewById(R.id.txtListaRecycler)).getText().toString());
-                            }
-                        }
-
                     if(spnOpciones.getSelectedItem().equals("+")){
                         if(filas1==filas2&&columnas1==columnas2){
+                            //Tabla1
+                            int contador1 = 0;
+                            String[][] result1 = adapter1.getData();
+                            double[][] matriz1 = new double[filas1][columnas1];
+                            for (int i = 0; i < result1.length; i++) {
+                                for (int j = 0; j < result1.length; j++) {
+                                    ConstraintLayout rootView1 = (ConstraintLayout) recycler1.getChildAt(contador1++);
+                                    matriz1[i][j] = Double.parseDouble(((EditText) rootView1.findViewById(R.id.txtListaRecycler)).getText().toString());
+                                }
+                            }
+                            //Tabla2
+                            int contador2 = 0;
+                            String[][] result2 = adapter2.getData();
+                            double[][] matriz2 = new double[filas2][columnas2];
+                            for (int i = 0; i < result2.length; i++) {
+                                for (int j = 0; j < result2.length; j++) {
+                                    ConstraintLayout rootView2 = (ConstraintLayout) recycler2.getChildAt(contador2++);
+                                    matriz2[i][j] = Double.parseDouble(((EditText) rootView2.findViewById(R.id.txtListaRecycler)).getText().toString());
+                                }
+                            }
                             double[][] r= new double[matriz1.length][matriz1[0].length];
                             for(int i = 0; i < filas1; i++)
                             {
@@ -148,12 +149,31 @@ public class U2_Operaciones_Matrices extends AppCompatActivity {
                     }
                     if(spnOpciones.getSelectedItem().equals("-")){
                         if(filas1==filas2&&columnas1==columnas2){
+                            //Tabla1
+                            int contador1 = 0;
+                            String[][] result1 = adapter1.getData();
+                            double[][] matriz1 = new double[filas1][columnas1];
+                            for (int i = 0; i < result1.length; i++) {
+                                for (int j = 0; j < result1.length; j++) {
+                                    ConstraintLayout rootView1 = (ConstraintLayout) recycler1.getChildAt(contador1++);
+                                    matriz1[i][j] = Double.parseDouble(((EditText) rootView1.findViewById(R.id.txtListaRecycler)).getText().toString());
+                                }
+                            }
+                            //Tabla2
+                            int contador2 = 0;
+                            String[][] result2 = adapter2.getData();
+                            double[][] matriz2 = new double[filas2][columnas2];
+                            for (int i = 0; i < result2.length; i++) {
+                                for (int j = 0; j < result2.length; j++) {
+                                    ConstraintLayout rootView2 = (ConstraintLayout) recycler2.getChildAt(contador2++);
+                                    matriz2[i][j] = Double.parseDouble(((EditText) rootView2.findViewById(R.id.txtListaRecycler)).getText().toString());
+                                }
+                            }
                             double[][] r= new double[matriz1.length][matriz1[0].length];
                                     for(int i = 0; i < filas1; i++)
                                     {
                                         for(int j = 0; j < columnas1; j++)
                                             r[i][j] = matriz1[i][j] - matriz2[i][j];
-
                                     }
                             arrayList = new ArrayList<>();
                             for (int i = 0; i < matriz1.length; i++) {
@@ -166,25 +186,46 @@ public class U2_Operaciones_Matrices extends AppCompatActivity {
                             Rrecycler.setAdapter(adapterR);
                         }else{ Toast.makeText(U2_Operaciones_Matrices.this, "No se pueden restar estas matrices", Toast.LENGTH_SHORT).show();}
                     }
+
+
                     if(spnOpciones.getSelectedItem().equals("*")){
-                        if(columnas1==filas2){
-                            double mRM[][] = new double[filas1][columnas2];
-                            for(int i = 0; i < filas1; i++)
-                            {
-                                for(int j = 0; j < columnas2; j++)
-                                {
-                                    for(int h = 0; h < columnas1; h++)
-                                        mRM[i][j] += matriz1[i][h] * matriz2[h][j];
+                        if(filas2==columnas1){
+                            //Tabla1
+                            int contador1 = 0;
+                            String[][] result1 = adapter1.getData();
+                            double[][] matriz1 = new double[filas1][columnas1];
+                            for (int i = 0; i < filas1; i++) {
+                                for (int j = 0; j < columnas1; j++) {
+                                    ConstraintLayout rootView1 = (ConstraintLayout) recycler1.getChildAt(contador1++);
+                                    matriz1[i][j] = Double.parseDouble(((EditText) rootView1.findViewById(R.id.txtListaRecycler)).getText().toString());
+                                }
+                            }
+                            //Tabla2
+                            int contador2 = 0;
+                            String[][] result2 = adapter2.getData();
+                            double[][] matriz2 = new double[filas2][columnas2];
+                            for (int i = 0; i < filas2; i++) {
+                                for (int j = 0; j < columnas2; j++) {
+                                    ConstraintLayout rootView2 = (ConstraintLayout) recycler2.getChildAt(contador2++);
+                                    matriz2[i][j] = Double.parseDouble(((EditText) rootView2.findViewById(R.id.txtListaRecycler)).getText().toString());
+                                }
+                            }
+                            double[][] mR=new double[filas1][columnas2];
+                            for(int i=0;i<filas1;i++){
+                                for(int j=0;j<columnas2;j++){
+                                    for(int h=0;h<columnas1;h++){
+                                        mR[i][j]+=matriz1[i][h]*matriz2[h][j];
+                                    }
                                 }
                             }
                             arrayList = new ArrayList<>();
-                            for (int i = 0; i < matriz2.length; i++) {
-                                for (int x = 0; x < matriz1[0].length; x++) {
-                                    arrayList.add(String.valueOf(MainActivity.decimalToFraction(mRM[i][x])));
+                            for (int i = 0; i < matriz1.length; i++) {
+                                for (int x = 0; x < matriz2[0].length; x++) {
+                                    arrayList.add(String.valueOf(MainActivity.decimalToFraction(mR[i][x])));
                                 }
                             }
                             Rrecycler.setLayoutManager(new GridLayoutManager(U2_Operaciones_Matrices.this, columnas2));
-                            adapterR = new AdapterDatosResultados(arrayList, filas1, columnas1);
+                            adapterR = new AdapterDatosResultados(arrayList, filas1, columnas2);
                             Rrecycler.setAdapter(adapterR);
                         }else{ Toast.makeText(U2_Operaciones_Matrices.this, "No se pueden multiplicar estas matrices", Toast.LENGTH_SHORT).show();}
                     }
