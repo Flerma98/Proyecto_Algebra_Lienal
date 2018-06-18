@@ -1,6 +1,7 @@
 package com.tec.fernandoalberto.proyecto_algebra_lineal;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,15 @@ import android.widget.Toast;
 
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatostxt;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Adjunta;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Cofactor;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Determinante;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Inversa;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Menores;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Operaciones_Matrices;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Rango;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Transpuesta;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_4.U4_Independencia_Lineal;
 
 import java.util.ArrayList;
 
@@ -32,12 +42,29 @@ public class Espacio_Vectorial extends Fragment {
         listaDatos.add("Base de una Matriz");
         listaDatos.add("Dimensión de una Matríz");
         listaDatos.add("Producto Interno");
-         recycler1.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+         recycler1.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         AdapterDatostxt adapter= new AdapterDatostxt(listaDatos);
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "Selección: " + listaDatos.get(recycler1.getChildAdapterPosition(view)),Toast.LENGTH_SHORT).show();
+                String clase= listaDatos.get(recycler1.getChildAdapterPosition(view));
+                switch (clase){
+                    case "Independencia Lineal":
+                        startActivity(new Intent(getActivity(), U4_Independencia_Lineal.class));
+                        break;
+                    case "Combinación Lineal":
+                        startActivity(new Intent(getActivity(), U2_Transpuesta.class));
+                        break;
+                    case "Base de una Matriz":
+                        startActivity(new Intent(getActivity(), U2_Rango.class));
+                        break;
+                    case "Dimensión de una Matríz":
+                        startActivity(new Intent(getActivity(), U2_Inversa.class));
+                        break;
+                    case "Producto Interno":
+                        startActivity(new Intent(getActivity(), U2_Determinante.class));
+                        break;
+                }
             }
         });
         recycler1.setAdapter(adapter);

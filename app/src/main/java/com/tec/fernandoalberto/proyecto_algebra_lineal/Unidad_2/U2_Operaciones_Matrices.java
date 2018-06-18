@@ -115,7 +115,6 @@ public class U2_Operaciones_Matrices extends AppCompatActivity {
                             matriz1[i][j] = Double.parseDouble(((EditText) rootView1.findViewById(R.id.txtListaRecycler)).getText().toString());
                         }
                     }
-                        Jama.Matrix matrix1 = new Jama.Matrix(matriz1);
                         //Tabla2
                         int contador2 = 0;
                         String[][] result2 = adapter2.getData();
@@ -126,15 +125,20 @@ public class U2_Operaciones_Matrices extends AppCompatActivity {
                                 matriz2[i][j] = Double.parseDouble(((EditText) rootView2.findViewById(R.id.txtListaRecycler)).getText().toString());
                             }
                         }
-                        Jama.Matrix matrix2 = new Jama.Matrix(matriz1);
 
                     if(spnOpciones.getSelectedItem().equals("+")){
                         if(filas1==filas2&&columnas1==columnas2){
-                            double[][] suma= matrix1.plus(matrix2).getArray();
+                            double[][] r= new double[matriz1.length][matriz1[0].length];
+                            for(int i = 0; i < filas1; i++)
+                            {
+                                for(int j = 0; j < columnas1; j++)
+                                    r[i][j] = matriz1[i][j] + matriz2[i][j];
+
+                            }
                             arrayList = new ArrayList<>();
                             for (int i = 0; i < matriz1.length; i++) {
                                 for (int x = 0; x < matriz1[0].length; x++) {
-                                    arrayList.add(String.valueOf(MainActivity.decimalToFraction(suma[i][x])));
+                                    arrayList.add(String.valueOf(MainActivity.decimalToFraction(r[i][x])));
                                 }
                             }
                             Rrecycler.setLayoutManager(new GridLayoutManager(U2_Operaciones_Matrices.this, columnas2));
@@ -164,11 +168,19 @@ public class U2_Operaciones_Matrices extends AppCompatActivity {
                     }
                     if(spnOpciones.getSelectedItem().equals("*")){
                         if(columnas1==filas2){
-                            double[][] multi= matrix1.times(matrix2).getArray();
+                            double mRM[][] = new double[filas1][columnas2];
+                            for(int i = 0; i < filas1; i++)
+                            {
+                                for(int j = 0; j < columnas2; j++)
+                                {
+                                    for(int h = 0; h < columnas1; h++)
+                                        mRM[i][j] += matriz1[i][h] * matriz2[h][j];
+                                }
+                            }
                             arrayList = new ArrayList<>();
                             for (int i = 0; i < matriz2.length; i++) {
                                 for (int x = 0; x < matriz1[0].length; x++) {
-                                    arrayList.add(String.valueOf(MainActivity.decimalToFraction(multi[i][x])));
+                                    arrayList.add(String.valueOf(MainActivity.decimalToFraction(mRM[i][x])));
                                 }
                             }
                             Rrecycler.setLayoutManager(new GridLayoutManager(U2_Operaciones_Matrices.this, columnas2));
