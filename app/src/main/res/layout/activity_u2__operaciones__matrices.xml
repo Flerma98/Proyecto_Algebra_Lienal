@@ -6,4 +6,147 @@
     android:layout_height="match_parent"
     tools:context=".Unidad_2.U2_Operaciones_Matrices">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:text="Filas="/>
+
+        <EditText
+            android:id="@+id/txtOPE1Fila"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#878787"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:maxLength="2"
+            android:hint="#"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:text="Columnas="/>
+
+        <EditText
+            android:id="@+id/txtOPE1Columna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#878787"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:maxLength="2"
+            android:hint="#"/>
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnOPE1Crear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/OPE1Recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnOperacionMatrices">
+        </Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Filas="/>
+
+            <EditText
+                android:id="@+id/txtOPE2Fila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#878787"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="#"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Columnas="/>
+
+            <EditText
+                android:id="@+id/txtOPE2Columna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#878787"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="#"/>
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:id="@+id/btnOPE2Crear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/OPE2Recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resolver Operación"
+            android:id="@+id/btnResolverOperaciones"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:enabled="false"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ResultadoOPERecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

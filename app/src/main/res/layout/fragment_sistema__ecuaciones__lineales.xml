@@ -78,6 +78,16 @@
             android:text="Calcular"
             android:textAllCaps="false"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:text="Sistema de Ecuaciones Lineales"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textAlignment="center"/>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/SELRecycler"
             android:layout_width="match_parent"
@@ -90,7 +100,7 @@
             android:layout_margin="2mm"
             android:background="#8b1214"
             android:enabled="false"
-            android:hint="T"
+            android:hint="Metodo S.E.L."
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"

@@ -79,6 +79,16 @@
             android:text="Calcular Adjunta"
             android:textAllCaps="false"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:text="Adjunta"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/ADJUNTARESULTADORecycler"
             android:layout_width="match_parent"

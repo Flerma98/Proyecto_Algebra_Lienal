@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
 
 public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
@@ -171,9 +172,9 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                             double multircos = sumar * cosnanglo;
                             double multisen = sumar * sennangulo;
                             if (multisen > 0) {
-                                txtCalcularPotencia.setText("Z^" + txtN.getText() + "  =  " + String.valueOf(multircos) + "  +  " + String.valueOf(multisen) + "i");
+                                txtCalcularPotencia.setText("Z^" + txtN.getText() + "  =  " + String.valueOf(MainActivity.decimalToFraction(multircos)) + "  +  " + String.valueOf(MainActivity.decimalToFraction(multisen)) + "i");
                             } else {
-                                txtCalcularPotencia.setText("Z^" + txtN.getText() + "  =  " + String.valueOf(multircos) + "    " + String.valueOf(multisen) + "i");
+                                txtCalcularPotencia.setText("Z^" + txtN.getText() + "  =  " + String.valueOf(MainActivity.decimalToFraction(multircos)) + "    " + String.valueOf(MainActivity.decimalToFraction(multisen)) + "i");
                             }
 
                         } catch (Exception e) {
@@ -242,7 +243,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin < 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + " + " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + " + " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
 
                             if (ar < 0 && b > 0) {
@@ -252,7 +253,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin < 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + " + " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + " + " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
 
                             if (ar > 0 && b < 0) {
@@ -262,7 +263,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin > 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + " " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + " " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
 
                             if (ar < 0 && b < 0) {
@@ -272,7 +273,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin > 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + " " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + " " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
                         } catch (Exception e) {
                         }
@@ -295,9 +296,9 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                             double multisen = 0;
                             multisen = r * sennangulo;
                             if (multisen > 0) {
-                                txtCalcularPotencia.setText("Z^" + txtN.getText() + " = " + String.valueOf(multircos) + " + " + String.valueOf(multisen) + "i");
+                                txtCalcularPotencia.setText("Z^" + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(multircos)) + " + " + String.valueOf(MainActivity.decimalToFraction(multisen)) + "i");
                             } else {
-                                txtCalcularPotencia.setText("Z^" + txtN.getText() + " = " + String.valueOf(multircos) + "  " + String.valueOf(multisen) + "i");
+                                txtCalcularPotencia.setText("Z^" + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(multircos)) + "  " + String.valueOf(MainActivity.decimalToFraction(multisen)) + "i");
                             }
                         } catch (Exception e) {
                         }
@@ -343,7 +344,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin < 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + " + " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + " + " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
 
                             if (valorseno < 0 && valorcoseno > 0) {
@@ -353,7 +354,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin < 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + " + " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + " + " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
 
                             if (valorseno > 0 && valorcoseno < 0) {
@@ -363,7 +364,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin > 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + "  " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + "  " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
 
                             if (valorseno < 0 && valorcoseno < 0) {
@@ -373,7 +374,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin > 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + "  " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + "  " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
                         } catch (Exception e) {
                         }
@@ -405,9 +406,9 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                             double multircos = r * cosnanglo;
                             double multisen = r * sennangulo;
                             if (multisen > 0) {
-                                txtCalcularPotencia.setText("Z^" + txtN.getText() + " = " + String.valueOf(multircos) + " + " + String.valueOf(multisen) + "i");
+                                txtCalcularPotencia.setText("Z^" + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(multircos)) + " + " + String.valueOf(MainActivity.decimalToFraction(multisen)) + "i");
                             } else {
-                                txtCalcularPotencia.setText("Z^" + txtN.getText() + " = " + String.valueOf(multircos) + "  " + String.valueOf(multisen) + "i");
+                                txtCalcularPotencia.setText("Z^" + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(multircos)) + "  " + String.valueOf(MainActivity.decimalToFraction(multisen)) + "i");
                             }
                         } catch (Exception e) {
                         }
@@ -462,9 +463,9 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                             valorseno = Math.sin(anguloRadianes);
                             valorseno = valorseno * r;
                             if (valorseno > 0)
-                                txtCalcularRaiz.setText(valorcoseno + " + " + valorseno + "i");
+                                txtCalcularRaiz.setText(MainActivity.decimalToFraction(valorcoseno) + " + " + MainActivity.decimalToFraction(valorseno) + "i");
                             else
-                                txtCalcularRaiz.setText(valorcoseno + "  " + valorseno + "i");
+                                txtCalcularRaiz.setText(MainActivity.decimalToFraction(valorcoseno) + "  " + MainActivity.decimalToFraction(valorseno) + "i");
                             if (valorseno > 0 && valorcoseno > 0) {
                                 if (rporcos < 0) {
                                     rporcos = rporcos * -1;
@@ -472,7 +473,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin < 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + " + " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + " + " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
 
                             if (valorseno < 0 && valorcoseno > 0) {
@@ -482,7 +483,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin < 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + " + " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + " + " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
 
                             if (valorseno > 0 && valorcoseno < 0) {
@@ -492,7 +493,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin > 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + "  " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + "  " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
 
                             if (valorseno < 0 && valorcoseno < 0) {
@@ -502,7 +503,7 @@ public class U1_Potencias_Raiz_NComplejos extends AppCompatActivity {
                                 if (rporsin > 0) {
                                     rporsin = rporsin * -1;
                                 }
-                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(rporcos) + "  " + String.valueOf(rporsin) + "i");
+                                txtCalcularRaiz.setText("Raíz de " + txtN.getText() + " = " + String.valueOf(MainActivity.decimalToFraction(rporcos)) + "  " + String.valueOf(MainActivity.decimalToFraction(rporsin)) + "i");
                             }
                         } catch (Exception e) {
                         }

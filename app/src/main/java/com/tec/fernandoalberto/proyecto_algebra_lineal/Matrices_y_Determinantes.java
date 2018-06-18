@@ -25,6 +25,7 @@ import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Cofactor;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Determinante;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Inversa;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Menores;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Operaciones_Matrices;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Rango;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Transpuesta;
 
@@ -56,7 +57,7 @@ public class Matrices_y_Determinantes extends Fragment {
                 String clase= listaDatos.get(recycler1.getChildAdapterPosition(view));
                 switch (clase){
                     case "Operaciones con Matrices":
-                        startActivity(new Intent(getActivity(), U1_Operaciones_Basicas_Numeros_Complejos.class));
+                        startActivity(new Intent(getActivity(), U2_Operaciones_Matrices.class));
                         break;
                     case "Transpuesta de una Matriz":
                         startActivity(new Intent(getActivity(), U2_Transpuesta.class));

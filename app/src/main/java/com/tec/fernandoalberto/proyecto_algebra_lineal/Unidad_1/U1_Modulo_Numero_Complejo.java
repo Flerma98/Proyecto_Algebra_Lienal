@@ -7,7 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class U1_Modulo_Numero_Complejo extends AppCompatActivity {
 
@@ -42,7 +46,7 @@ public class U1_Modulo_Numero_Complejo extends AppCompatActivity {
                         a = a * a;
                         b = b * b;
                         suma = a + b;
-                        txtResultado.setText(String.valueOf(Math.sqrt(suma)));
+                        txtResultado.setText(String.valueOf(MainActivity.decimalToFraction(Math.sqrt(suma))));
                     }
                 }
             }

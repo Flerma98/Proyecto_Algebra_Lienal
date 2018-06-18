@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosResultados;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosTabla;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
 
 import java.util.ArrayList;
@@ -77,7 +78,7 @@ public class U2_Cofactor extends AppCompatActivity {
                     arrayList = new ArrayList<>();
                     for (int i = 0; i < matriz.length; i++) {
                         for (int x = 0; x < matriz[0].length; x++) {
-                            arrayList.add(String.valueOf(cofactor[i][x]));
+                            arrayList.add(String.valueOf(MainActivity.decimalToFraction(cofactor[i][x])));
                         }
                     }
                     Rrecycler.setLayoutManager(new GridLayoutManager(U2_Cofactor.this, columnas));

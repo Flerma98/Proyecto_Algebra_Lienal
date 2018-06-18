@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosResultados;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosTabla;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
 
 import java.util.ArrayList;
@@ -78,9 +79,9 @@ public class U2_Menores extends AppCompatActivity {
                     for (int i = 0; i < matriz.length; i++) {
                         for (int x = 0; x < matriz[0].length; x++) {
                             if((i + x) % 2 == 0)
-                                arrayList.add(String.valueOf(cofactor[i][x]));
+                                arrayList.add(String.valueOf(MainActivity.decimalToFraction(cofactor[i][x])));
                             else
-                                arrayList.add(String.valueOf(cofactor[i][x] * -1));
+                                arrayList.add(String.valueOf(MainActivity.decimalToFraction(cofactor[i][x] * -1)));
                         }
                     }
                     Rrecycler.setLayoutManager(new GridLayoutManager(U2_Menores.this, columnas));

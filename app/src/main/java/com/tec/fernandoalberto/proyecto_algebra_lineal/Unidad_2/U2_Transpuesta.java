@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosResultados;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosTabla;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
 
 import java.util.ArrayList;
@@ -76,7 +77,7 @@ public class U2_Transpuesta extends AppCompatActivity {
                 arrayList= new ArrayList<>();
                 for (int i = 0; i < matriz.length; i++) {
                     for (int x = 0; x < matriz[0].length; x++) {
-                        arrayList.add(String.valueOf(transpuesta[i][x]));
+                        arrayList.add(String.valueOf(MainActivity.decimalToFraction(transpuesta[i][x])));
                     }
                 }
                 Rrecycler.setLayoutManager(new GridLayoutManager(U2_Transpuesta.this, columnas));

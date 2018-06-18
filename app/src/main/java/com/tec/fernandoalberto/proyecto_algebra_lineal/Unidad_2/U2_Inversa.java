@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosResultados;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosTabla;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
 
 import java.math.BigDecimal;
@@ -82,7 +83,7 @@ public class U2_Inversa extends AppCompatActivity {
                     arrayList = new ArrayList<>();
                     for (int i = 0; i < matriz.length; i++) {
                         for (int x = 0; x < matriz[0].length; x++) {
-                            arrayList.add(String.valueOf(((double)Math.round((inversa[i][x]) * 10000d) / 10000d)));
+                            arrayList.add(String.valueOf(MainActivity.decimalToFraction(inversa[i][x])));
                         }
                     }
                     Rrecycler.setLayoutManager(new GridLayoutManager(U2_Inversa.this, columnas));

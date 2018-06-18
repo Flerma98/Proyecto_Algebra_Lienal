@@ -12,7 +12,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class U1_ConversionesRPE extends AppCompatActivity {
 
@@ -162,7 +166,7 @@ public class U1_ConversionesRPE extends AppCompatActivity {
                         ar = a * a;
                         br = b * b;
                         sumar = ar + br;
-                        txtConvertirPOL.setText("r= " + String.valueOf(Math.sqrt(sumar)) + "  θ= " + String.valueOf(angulo) + "°");
+                        txtConvertirPOL.setText("r= " + String.valueOf(MainActivity.decimalToFraction(Math.sqrt(sumar))) + "  θ= " + String.valueOf(MainActivity.decimalToFraction((angulo)) + "°"));
 
                         //Rectangular Exponencial
                         double aE = Double.parseDouble(txtA.getText().toString());
@@ -210,7 +214,7 @@ public class U1_ConversionesRPE extends AppCompatActivity {
                         brE = bE * bE;
                         sumarE = arE + brE;
 
-                        txtConvertirEXP.setText(String.valueOf(Math.sqrt(sumarE)) + "  e ^  " + String.valueOf(xradarribaE) + "i");
+                        txtConvertirEXP.setText(String.valueOf(MainActivity.decimalToFraction(Math.sqrt(sumarE))) + "  e ^  " + String.valueOf(MainActivity.decimalToFraction((xradarribaE)) + "i"));
                     }
                     if (opt == 1) {
                         //Polar Rectangular
@@ -229,9 +233,9 @@ public class U1_ConversionesRPE extends AppCompatActivity {
                         valorseno = valorseno * r;
 
                         if (valorseno > 0)
-                            txtConvertirREC.setText(valorcoseno + " + " + valorseno + "i");
+                            txtConvertirREC.setText(MainActivity.decimalToFraction(valorcoseno) + " + " + MainActivity.decimalToFraction(valorseno) + "i");
                         else
-                            txtConvertirREC.setText(valorcoseno + "  " + valorseno + "i");
+                            txtConvertirREC.setText(MainActivity.decimalToFraction(valorcoseno) + "  " + MainActivity.decimalToFraction(valorseno) + "i");
 
                         //Polar Polar
                         txtConvertirPOL.setText("r= " + txtA.getText().toString() + "  θ=  " + txtB.getText().toString() + "°");
@@ -243,7 +247,7 @@ public class U1_ConversionesRPE extends AppCompatActivity {
                         xradarriba = 3.1416 * angulo;
                         xradarriba = xradarriba / 180;
 
-                        txtConvertirEXP.setText(txtA.getText().toString() + "  e  ^  " + String.valueOf(xradarriba) + "°");
+                        txtConvertirEXP.setText(txtA.getText().toString() + "  e  ^  " + String.valueOf(MainActivity.decimalToFraction(xradarriba)) + "°");
                     }
                     if (opt == 2) {
                         //Exponencial Rectangular
@@ -268,9 +272,9 @@ public class U1_ConversionesRPE extends AppCompatActivity {
                         valorseno = valorseno * r;
 
                         if (valorseno > 0)
-                            txtConvertirREC.setText(valorcoseno + " + " + valorseno + "i");
+                            txtConvertirREC.setText(MainActivity.decimalToFraction(valorcoseno) + " + " + MainActivity.decimalToFraction(valorseno) + "i");
                         else
-                            txtConvertirREC.setText(valorcoseno + "  " + valorseno + "i");
+                            txtConvertirREC.setText(MainActivity.decimalToFraction(valorcoseno) + "  " + MainActivity.decimalToFraction(valorseno) + "i");
 
                         //Exponencial Polar
                         boolean verdadero = false;
@@ -286,9 +290,9 @@ public class U1_ConversionesRPE extends AppCompatActivity {
                         } while (verdadero == false);
                         if (divisionP < 0) {
                             divisionP = 360 + divisionP;
-                            txtConvertirPOL.setText("r= " + txtA.getText().toString() + "  θ=  " + String.valueOf(divisionP) + "°");
+                            txtConvertirPOL.setText("r= " + txtA.getText().toString() + "  θ=  " + String.valueOf(MainActivity.decimalToFraction(divisionP)) + "°");
                         } else {
-                            txtConvertirPOL.setText("r= " + txtA.getText().toString() + "  θ=  " + String.valueOf(divisionP) + "°");
+                            txtConvertirPOL.setText("r= " + txtA.getText().toString() + "  θ=  " + String.valueOf(MainActivity.decimalToFraction(divisionP)) + "°");
                         }
 
                         //Exponencial Exponencial

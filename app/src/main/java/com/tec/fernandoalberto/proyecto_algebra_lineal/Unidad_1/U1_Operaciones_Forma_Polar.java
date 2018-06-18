@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
 
 public class U1_Operaciones_Forma_Polar extends AppCompatActivity {
@@ -114,7 +115,7 @@ public class U1_Operaciones_Forma_Polar extends AppCompatActivity {
                                 } while (sumaAng < 0);
                             }
 
-                            txtResultado.setText(String.valueOf(multiR) + "  |_  " + String.valueOf(sumaAng) + "°");
+                            txtResultado.setText(String.valueOf(MainActivity.decimalToFraction(multiR)) + "  |_  " + String.valueOf(MainActivity.decimalToFraction(sumaAng)) + "°");
                         }
                         if (spnOperacion.getSelectedItem().equals("/")) {
                             boolean Ang1div = false;
@@ -182,7 +183,7 @@ public class U1_Operaciones_Forma_Polar extends AppCompatActivity {
                                 } while (restaAng < 0);
                             }
 
-                            txtResultado.setText(String.valueOf(diviR) + "  |_  " + String.valueOf(restaAng) + "°");
+                            txtResultado.setText(String.valueOf(MainActivity.decimalToFraction(diviR)) + "  |_  " + String.valueOf(MainActivity.decimalToFraction(restaAng)) + "°");
                         }
                     }
                 }

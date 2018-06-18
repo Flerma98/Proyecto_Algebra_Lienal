@@ -9,7 +9,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class U1_Operaciones_Basicas_Numeros_Complejos extends AppCompatActivity {
 
@@ -76,18 +80,18 @@ public class U1_Operaciones_Basicas_Numeros_Complejos extends AppCompatActivity 
                             z1 = z1 + b1;
                             z2 = z2 + b2;
                             if (z2 < 0)
-                                txtResultado.setText(String.valueOf(z1 + " " + z2 + "i"));
+                                txtResultado.setText(String.valueOf(MainActivity.decimalToFraction(z1) + " " + MainActivity.decimalToFraction(z2) + "i"));
                             else
-                                txtResultado.setText(String.valueOf(z1 + " + " + z2 + "i"));
+                                txtResultado.setText(String.valueOf(MainActivity.decimalToFraction(z1) + " + " + MainActivity.decimalToFraction(z2) + "i"));
                         }
 
                         if (spnOperacion.getSelectedItem().equals("-")) {
                             z1 = (z1) - (b1);
                             z2 = (z2) - (b2);
                             if (z2 < 0)
-                                txtResultado.setText(String.valueOf(z1 + " " + z2 + "i"));
+                                txtResultado.setText(String.valueOf(MainActivity.decimalToFraction(z1) + " " + MainActivity.decimalToFraction(z2) + "i"));
                             else
-                                txtResultado.setText(String.valueOf(z1 + " + " + z2 + "i"));
+                                txtResultado.setText(String.valueOf(MainActivity.decimalToFraction(z1) + " + " + MainActivity.decimalToFraction(z2) + "i"));
                         }
 
                         if (spnOperacion.getSelectedItem().equals("*")) {
@@ -98,9 +102,9 @@ public class U1_Operaciones_Basicas_Numeros_Complejos extends AppCompatActivity 
                             acbd = ac - bd;
                             adbc = ad + bc;
                             if (adbc < 0)
-                                txtResultado.setText(String.valueOf(acbd + " " + adbc + "i"));
+                                txtResultado.setText(String.valueOf(MainActivity.decimalToFraction(acbd) + " " + MainActivity.decimalToFraction(adbc) + "i"));
                             else
-                                txtResultado.setText(String.valueOf(acbd + " + " + adbc + "i"));
+                                txtResultado.setText(String.valueOf(MainActivity.decimalToFraction(acbd) + " + " + MainActivity.decimalToFraction(adbc) + "i"));
                         }
 
                         if (spnOperacion.getSelectedItem().equals("/")) {
@@ -115,9 +119,9 @@ public class U1_Operaciones_Basicas_Numeros_Complejos extends AppCompatActivity 
                             sumai = ad + bc;
                             sumaabajo = c + d;
                             if (sumai < 0)
-                                total = String.valueOf(sumaarriba + "/" + sumaabajo + "  " + sumai + "/" + sumaabajo + "i");
+                                total = String.valueOf(MainActivity.decimalToFraction(sumaarriba) + "/" + MainActivity.decimalToFraction(sumaabajo) + "  " + MainActivity.decimalToFraction(sumai) + "/" + MainActivity.decimalToFraction(sumaabajo) + "i");
                             else
-                                total = String.valueOf(sumaarriba + "/" + sumaabajo + " + " + sumai + "/" + sumaabajo + "i");
+                                total = String.valueOf(MainActivity.decimalToFraction(sumaarriba) + "/" + MainActivity.decimalToFraction(sumaabajo) + " + " + MainActivity.decimalToFraction(sumai) + "/" + MainActivity.decimalToFraction(sumaabajo) + "i");
                             txtResultado.setText(total);
                         }
                     }

@@ -79,6 +79,16 @@
             android:text="Calcular Menores"
             android:textAllCaps="false"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:text="Menores"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/MENORESRESULTADORecycler"
             android:layout_width="match_parent"

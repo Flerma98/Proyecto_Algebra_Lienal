@@ -12,6 +12,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class MainActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -38,6 +41,58 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    public static String decimalToFraction(Double decimal)
+    {
+        String fraccion = "";
+        String nDecimal = String.valueOf(decimal);
+        if(nDecimal.contains("."))
+        {
+            String despuesPunto = nDecimal.substring(nDecimal.indexOf(".") + 1, nDecimal.length());
+            Long multiplicador = Long.valueOf((long)Math.pow(10, despuesPunto.length()));
+            double numerador = Math.round(decimal.doubleValue() * (double)multiplicador.longValue());
+            double denominador = multiplicador.longValue();
+            boolean simplificable = true;
+            do{
+                for(int contador = 1; contador <= 121; contador++)
+                {
+                    if(numerador % (double)contador == 0 && denominador % (double)contador == 0){
+                        numerador /= contador;
+                        denominador /= contador;
+                        contador = 1;
+                    }else{
+                        simplificable = false;
+                    }
+                }
+            } while(simplificable);
+            int num = (int)Math.round(numerador);
+            int den = (int)Math.round(denominador);
+            if(den == 1)
+                fraccion = String.valueOf(num);
+            else
+                fraccion = (new StringBuilder()).append(String.valueOf(num)).append("/").append(String.valueOf(den)).toString();
+        } else
+        {
+            fraccion = String.valueOf(decimal);
+        }
+        String cuantos = fraccion;
+        if(cuantos.length() > 5)
+        {
+            String val = (new StringBuilder()).append(decimal).append("").toString();
+            BigDecimal big = new BigDecimal(val);
+            big = big.setScale(4, RoundingMode.HALF_UP);
+            fraccion = String.valueOf(big);
+            String despuesPunto = fraccion.substring(fraccion.indexOf(".") + 1, fraccion.length());
+            int despues = Integer.parseInt(despuesPunto);
+            if(despues < 1){
+                String valfin = (new StringBuilder()).append(decimal).append("").toString();
+                BigDecimal bigfin = new BigDecimal(valfin);
+                bigfin = bigfin.setScale(0, RoundingMode.HALF_UP);
+                fraccion = String.valueOf(bigfin);
+            }
+        }
+        return fraccion;
     }
 
     @Override

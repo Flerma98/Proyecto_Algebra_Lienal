@@ -92,11 +92,14 @@ public class Sistema_Ecuaciones_Lineales extends Fragment {
                         }
                     }
                     double[][] MatrizResultados= new double[result.length][1];
+                    double[]matrizr= new double[result.length];
                     for (int i = 0; i < result.length; i++) {
                         MatrizResultados[i][0]= matriz[i][result[0].length-1];
+                        matrizr[i]=  matriz[i][result[0].length-1];
                     }
                     Matrix matrix = new Matrix(matrizDatos);
                     double[][] inversa = matrix.inverse().getArray();
+
 
                   Jama.Matrix matrixinversa = new Jama.Matrix(inversa);
                     Jama.Matrix matrixR = new Jama.Matrix(MatrizResultados);
@@ -104,8 +107,9 @@ public class Sistema_Ecuaciones_Lineales extends Fragment {
                     double[][] SEL = matrixinversa.times(matrixR).getArray();
                 arrayList = new ArrayList<>();
                 for (int i = 0; i < matriz.length; i++) {
-                            arrayList.add(String.valueOf(decimalToFraction(SEL[i][0])));
+                            arrayList.add(String.valueOf(MainActivity.decimalToFraction(SEL[i][0])));
                 }
+                Cargar_Matriz(matrizDatos, matrizr);
                 Rrecycler.setLayoutManager(new GridLayoutManager(getActivity(), columnas-1));
                 adapterR = new AdapterDatosResultados(arrayList, filas, columnas);
                 Rrecycler.setAdapter(adapterR);
@@ -117,57 +121,6 @@ public class Sistema_Ecuaciones_Lineales extends Fragment {
         return view;
     }
 
-    public static String decimalToFraction(Double decimal)
-    {
-        String fraccion = "";
-        String nDecimal = String.valueOf(decimal);
-        if(nDecimal.contains("."))
-        {
-            String despuesPunto = nDecimal.substring(nDecimal.indexOf(".") + 1, nDecimal.length());
-            Long multiplicador = Long.valueOf((long)Math.pow(10, despuesPunto.length()));
-            double numerador = Math.round(decimal.doubleValue() * (double)multiplicador.longValue());
-            double denominador = multiplicador.longValue();
-            boolean simplificable = true;
-            do{
-                for(int contador = 1; contador <= 121; contador++)
-                {
-                    if(numerador % (double)contador == 0 && denominador % (double)contador == 0){
-                        numerador /= contador;
-                        denominador /= contador;
-                        contador = 1;
-                    }else{
-                        simplificable = false;
-                    }
-                }
-            } while(simplificable);
-            int num = (int)Math.round(numerador);
-            int den = (int)Math.round(denominador);
-            if(den == 1)
-                fraccion = String.valueOf(num);
-            else
-                fraccion = (new StringBuilder()).append(String.valueOf(num)).append("/").append(String.valueOf(den)).toString();
-        } else
-        {
-            fraccion = String.valueOf(decimal);
-        }
-        String cuantos = fraccion;
-        if(cuantos.length() > 5)
-        {
-            String val = (new StringBuilder()).append(decimal).append("").toString();
-            BigDecimal big = new BigDecimal(val);
-            big = big.setScale(4, RoundingMode.HALF_UP);
-            fraccion = String.valueOf(big);
-            String despuesPunto = fraccion.substring(fraccion.indexOf(".") + 1, fraccion.length());
-            int despues = Integer.parseInt(despuesPunto);
-            if(despues < 1){
-                String valfin = (new StringBuilder()).append(decimal).append("").toString();
-                BigDecimal bigfin = new BigDecimal(valfin);
-                bigfin = bigfin.setScale(0, RoundingMode.HALF_UP);
-                fraccion = String.valueOf(bigfin);
-            }
-        }
-        return fraccion;
-    }
 
     private static double Determinante(double m[][])
     {
@@ -252,18 +205,18 @@ public class Sistema_Ecuaciones_Lineales extends Fragment {
             {
                 for(k = 0; k < r.length; k++){
             }
-            if(r[r.length - 1] == 0.0D && xx == aa)
+            if(r[r.length - 1] == 0.0 && xx == aa)
             {
 
             }
-                Toast.makeText(getActivity(),"Consistente con Soluciones Infinitas", Toast.LENGTH_SHORT).show();
+                txtResultado.setText("Consistente con Soluciones Infinitas");
                 i = aa;
                 yy = aa;
                 consistente = false;
             }
-            if(r[r.length - 1] != 0.0D && xx == aa)
+            if(r[r.length - 1] != 0.0 && xx == aa)
             {
-                Toast.makeText(getActivity(),"Inconsistente sin Solución", Toast.LENGTH_SHORT).show();
+                txtResultado.setText("Inconsistente sin Solución");
                 i = aa;
                 yy = aa;
                 inconsistente = false;
@@ -284,21 +237,20 @@ public class Sistema_Ecuaciones_Lineales extends Fragment {
                 r[x] = r[x] - c * r[i];
                 for(l = 0; l < r.length; l++)
                 {
-                    for(p = 0; p < r.length; p++)
-                        System.out.println((new StringBuilder()).append(Double.toString(m[l][p])).append("\t").toString());
+                    for(p = 0; p < r.length; p++){
 
-                    System.out.println((new StringBuilder()).append("|\t").append(Double.toString(r[l])).append("\n").toString());
+                    }
                 }
 
                 if(r[r.length - 1] == 0.0 && xx == aa)
                 {
-                    Toast.makeText(getActivity(),"Consistente con Soluciones Infinitas", Toast.LENGTH_SHORT).show();
+                    txtResultado.setText("Consistente con Soluciones Infinitas");
                     i = aa;
                     consistente = false;
                 }
-                if(r[r.length - 1] != 0.0D && xx == aa)
+                if(r[r.length - 1] != 0.0 && xx == aa)
                 {
-                    Toast.makeText(getActivity(),"Inconsistente sin Solución", Toast.LENGTH_SHORT).show();
+                    txtResultado.setText("Inconsistente sin Solución");
                     i = aa;
                     inconsistente = false;
                 }
