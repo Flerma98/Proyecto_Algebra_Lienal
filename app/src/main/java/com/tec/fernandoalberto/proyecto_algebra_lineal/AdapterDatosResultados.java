@@ -5,17 +5,20 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
 public class AdapterDatosResultados extends RecyclerView.Adapter<AdapterDatosResultados.ViewHolderDatos> implements View.OnClickListener{
 
     ArrayList<String> listDatos;
+    int filas, columnas;
     private View.OnClickListener listener;
 
-    public AdapterDatosResultados(ArrayList<String> listDatos) {
+    public AdapterDatosResultados(ArrayList<String> listDatos, int filas, int columnas) {
         this.listDatos = listDatos;
+        this.filas= filas;
+        this.columnas= columnas;
     }
 
     //@NonNull
@@ -29,6 +32,17 @@ public class AdapterDatosResultados extends RecyclerView.Adapter<AdapterDatosRes
     @Override
     public void onBindViewHolder(@NonNull ViewHolderDatos holder, int position) {
         holder.asignarDatos(listDatos.get(position));
+    }
+
+    public String[][] getData(){
+        int cont =0;
+        String[][] strings= new String[filas][columnas];
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                strings[i][j]= listDatos.get(cont++);
+            }
+        }
+        return strings;
     }
 
     @Override
@@ -49,11 +63,15 @@ public class AdapterDatosResultados extends RecyclerView.Adapter<AdapterDatosRes
 
     public class ViewHolderDatos extends RecyclerView.ViewHolder {
 
-        TextView dato;
+        EditText dato;
 
         public ViewHolderDatos(View itemView) {
             super(itemView);
-            dato= (TextView) itemView.findViewById(R.id.btnListaRecycler);
+            dato= (EditText) itemView.findViewById(R.id.txtListaRecycler);
+        }
+
+        public String getData(){
+            return dato.getText().toString();
         }
 
         public void asignarDatos(String s) {

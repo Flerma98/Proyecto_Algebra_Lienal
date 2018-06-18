@@ -25,7 +25,15 @@
         <activity android:name=".Unidad_1.U1_Modulo_Numero_Complejo" />
         <activity android:name=".Unidad_1.U1_Operaciones_Forma_Polar" />
         <activity android:name=".Unidad_1.U1_Potencias_Raiz_NComplejos" />
-        <activity android:name=".Unidad_2.U2_Transpuesta"></activity>
+        <activity android:name=".Unidad_2.U2_Transpuesta" />
+        <activity android:name=".Unidad_2.U2_Rango" />
+        <activity android:name=".Unidad_2.U2_Inversa" />
+        <activity android:name=".Unidad_2.U2_Determinante" />
+        <activity android:name=".Unidad_2.U2_Operaciones_Matrices" />
+        <activity android:name=".Unidad_2.U2_Menores" />
+        <activity android:name=".Unidad_2.U2_Cofactor" />
+        <activity android:name=".Unidad_2.U2_Adjunta" />
+        <activity android:name=".Unidad_4.U4_Independencia_Lineal"></activity>
     </application>
 
 </manifest>

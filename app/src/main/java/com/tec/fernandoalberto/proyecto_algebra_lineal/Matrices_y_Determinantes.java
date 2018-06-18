@@ -20,6 +20,12 @@ import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_1.U1_Operaciones_B
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_1.U1_Operaciones_Forma_Polar;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_1.U1_Potencias_Raiz_NComplejos;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_1.U1_Potencias_i;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Adjunta;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Cofactor;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Determinante;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Inversa;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Menores;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Rango;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Transpuesta;
 
 import java.util.ArrayList;
@@ -56,22 +62,22 @@ public class Matrices_y_Determinantes extends Fragment {
                         startActivity(new Intent(getActivity(), U2_Transpuesta.class));
                         break;
                     case "Rango de una Matriz":
-                        startActivity(new Intent(getActivity(), U1_Modulo_Numero_Complejo.class));
+                        startActivity(new Intent(getActivity(), U2_Rango.class));
                         break;
                     case "Inversa de una Matriz":
-                        startActivity(new Intent(getActivity(), U1_ConversionesRPE.class));
+                        startActivity(new Intent(getActivity(), U2_Inversa.class));
                         break;
                     case "Determinante de una Matriz":
-                        startActivity(new Intent(getActivity(), U1_Operaciones_Forma_Polar.class));
+                        startActivity(new Intent(getActivity(), U2_Determinante.class));
                         break;
                     case "Menores de una Matriz":
-                        startActivity(new Intent(getActivity(), U1_Potencias_Raiz_NComplejos.class));
+                        startActivity(new Intent(getActivity(), U2_Menores.class));
                         break;
                     case "Cofactor de una Matriz":
-                        startActivity(new Intent(getActivity(), U1_ConversionesRPE.class));
+                        startActivity(new Intent(getActivity(), U2_Cofactor.class));
                         break;
-                    case "Ajunta de una Matriz":
-                        startActivity(new Intent(getActivity(), U1_Operaciones_Forma_Polar.class));
+                    case "Adjunta de una Matriz":
+                        startActivity(new Intent(getActivity(), U2_Adjunta.class));
                         break;
                 }
             }

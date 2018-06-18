@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Unidad_4.U4_Independencia_Lineal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Filas="/>
+
+            <EditText
+                android:id="@+id/txtINDLINFila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#878787"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="#"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Columnas="/>
+
+            <EditText
+                android:id="@+id/txtINDLINColumna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#878787"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="#"/>
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:id="@+id/btnINDLINCrear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/INDLINRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnObtenerINDLIN"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:enabled="false"
+            android:text="Calcular"
+            android:textAllCaps="false"/>
+
+        <EditText
+            android:id="@+id/txtResultadoINDLIN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2mm"
+            android:background="#1f4521"
+            android:enabled="false"
+            android:hint="Solución"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textStyle="bold"
+            android:textSize="50sp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
