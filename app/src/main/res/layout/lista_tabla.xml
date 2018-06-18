@@ -8,7 +8,7 @@
         android:id="@+id/txtListaRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:inputType="numberSigned"
+        android:inputType="numberDecimal|numberSigned"
         android:background="#c1c0c0"
         android:hint="#"
         android:maxLength="8"

@@ -6,4 +6,93 @@
     android:layout_height="match_parent"
     tools:context=".Unidad_2.U2_Determinante">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Filas="/>
+
+            <EditText
+                android:id="@+id/txtDETERMIANNTEFila"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#878787"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="#"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Columnas="/>
+
+            <EditText
+                android:id="@+id/txtDETERMIANNTEColumna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#878787"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="#"/>
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:id="@+id/btnDETERMIANNTECrear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/DETERMIANNTERecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnObtenerDETERMIANNTE"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:enabled="false"
+            android:text="Calcular Determinante"
+            android:textAllCaps="false"/>
+
+        <EditText
+            android:id="@+id/txtResultadoDETERMIANNTE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2mm"
+            android:background="#4d014b"
+            android:enabled="false"
+            android:hint="Determinante"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textStyle="bold"
+            android:textSize="50sp" />
+
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

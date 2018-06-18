@@ -78,6 +78,25 @@
             android:text="Calcular"
             android:textAllCaps="false"/>
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/SELRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/txtResultadoSEL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2mm"
+            android:background="#8b1214"
+            android:enabled="false"
+            android:hint="T"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textStyle="bold"
+            android:textSize="50sp" />
+
     </LinearLayout>
 
 </FrameLayout>

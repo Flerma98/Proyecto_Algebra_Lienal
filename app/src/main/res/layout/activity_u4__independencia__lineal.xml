@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:enabled="false"
-            android:text="Calcular"
+            android:text="Obtener "
             android:textAllCaps="false"/>
 
         <EditText

@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:enabled="false"
-            android:text="Calcular"
+            android:text="Obtener Transpuesta"
             android:textAllCaps="false"/>
 
         <android.support.v7.widget.RecyclerView

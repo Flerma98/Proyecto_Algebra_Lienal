@@ -39,7 +39,7 @@ public class U2_Cofactor extends AppCompatActivity {
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (txtFilas.getText().toString().length() == 0 || txtColumnas.getText().toString().length() == 0) {
+                if (txtFilas.getText().toString().length() == 0 || txtColumnas.getText().toString().length() == 0 || Integer.parseInt(txtFilas.getText().toString())!=Integer.parseInt(txtColumnas.getText().toString())) {
                     btnObtener.setEnabled(false);
                 } else {
                     btnObtener.setEnabled(true);
