@@ -5,6 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".Sistema_Ecuaciones_Lineales">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,15 +57,16 @@
             android:maxLength="2"
             android:hint="#"/>
 
+    </LinearLayout>
+
         <Button
-            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="10dp"
             android:id="@+id/btnFSELCrear"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Crear"
             android:textAllCaps="false"/>
-
-    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/FSELRecycler"
@@ -108,5 +114,7 @@
             android:textSize="50sp" />
 
     </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

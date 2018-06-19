@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Unidad_4.U4_Independencia_Lineal">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,15 +58,16 @@
                 android:maxLength="2"
                 android:hint="#"/>
 
-            <Button
-                android:layout_marginLeft="10dp"
-                android:id="@+id/btnINDLINCrear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Crear"
-                android:textAllCaps="false"/>
-
         </LinearLayout>
+
+        <Button
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/btnINDLINCrear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear"
+            android:textAllCaps="false"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/INDLINRecycler"
@@ -94,5 +100,7 @@
             android:textSize="50sp" />
 
     </LinearLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

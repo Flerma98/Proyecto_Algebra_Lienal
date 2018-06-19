@@ -19,50 +19,79 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Unidad_1.U1_Operaciones_Basicas_Numeros_Complejos"
+        <activity
+            android:name=".Unidad_1.U1_Operaciones_Basicas_Numeros_Complejos"
             android:label="Operaciones Basicas con Numeros Complejos"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_1.U1_ConversionesRPE"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_1.U1_ConversionesRPE"
             android:label="Conversiones (Rectangular - Polar - Exponencial)"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_1.U1_Potencias_i"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_1.U1_Potencias_i"
             android:label="Potencias de i"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_1.U1_Modulo_Numero_Complejo"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_1.U1_Modulo_Numero_Complejo"
             android:label="Modulo de un Numero Complejo"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_1.U1_Operaciones_Forma_Polar"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_1.U1_Operaciones_Forma_Polar"
             android:label="Operaciones en Forma Polar"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_1.U1_Potencias_Raiz_NComplejos"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_1.U1_Potencias_Raiz_NComplejos"
             android:label="Potencia y Raíz de Numeros Complejos"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_2.U2_Transpuesta"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_2.U2_Transpuesta"
             android:label="Transpuesta de una Matriz"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_2.U2_Rango"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_2.U2_Rango"
             android:label="Rango de una Matriz"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_2.U2_Inversa"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_2.U2_Inversa"
             android:label="Inversa de una Matriz"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_2.U2_Determinante"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_2.U2_Determinante"
             android:label="Determinantes de una Matriz"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_2.U2_Operaciones_Matrices"
-            android:label="Operaciones Bbasicas con Matrices"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_2.U2_Menores"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_2.U2_Operaciones_Matrices"
+            android:label="Operaciones Basicas con Matrices"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_2.U2_Menores"
             android:label="Menores de una Matriz"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_2.U2_Cofactor"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_2.U2_Cofactor"
             android:label="Cofactor de una Matriz"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_2.U2_Adjunta"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_2.U2_Adjunta"
             android:label="Adjunta de una Matriz"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Unidad_4.U4_Independencia_Lineal"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_4.U4_Independencia_Lineal"
             android:label="Independencia Lineal"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_4.U4_Producto_Interno"
+            android:label="Producto Interno"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Unidad_4.U4_Combinacion_Lineal"
+            android:label="Combinación Lineal"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Unidad_4.U4_Base"
+            android:label="Base de una Matriz"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Unidad_4.U4_Dimension"
+            android:label="Dimensión de una Matriz"
             android:parentActivityName=".MainActivity"></activity>
     </application>
 

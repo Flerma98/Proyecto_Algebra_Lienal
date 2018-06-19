@@ -58,6 +58,7 @@ public class U2_Operaciones_Matrices extends AppCompatActivity {
                 try {
                 if(txtF1.getText().toString().length()==0 || txtC1.getText().toString().length()==0){
                     t1=false;
+                    Toast.makeText(U2_Operaciones_Matrices.this, "Campos no validos", Toast.LENGTH_SHORT).show();
                     btnResultado.setEnabled(false);
                 } else {
                     t1=true;
@@ -84,6 +85,7 @@ public class U2_Operaciones_Matrices extends AppCompatActivity {
                 try {
                 if(txtF2.getText().toString().length()==0 || txtC2.getText().toString().length()==0){
                     t2=false;
+                    Toast.makeText(U2_Operaciones_Matrices.this, "Campos no validos", Toast.LENGTH_SHORT).show();
                 } else {
                     t2=true;
                     if(t1&&t2){

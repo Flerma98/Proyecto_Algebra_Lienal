@@ -25,14 +25,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="45sp"
                     android:text="Z1=" />
                 <EditText
                     android:id="@+id/txtCZ1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:hint="#"
                     android:text="1"
                     android:inputType="numberDecimal|numberSigned"/>
@@ -40,14 +40,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="80sp"
+                    android:textSize="70sp"
                     android:text="("/>
                 <EditText
                     android:id="@+id/Z1A"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="55sp"
                     android:inputType="numberDecimal|numberSigned"
                     android:hint="#" />
                 <EditText
@@ -55,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="55sp"
                     android:inputType="numberDecimal|numberSigned"
                     android:layout_marginLeft="2mm"
                     android:hint="#" />
@@ -63,7 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="80sp"
+                    android:textSize="65sp"
                     android:text="i )"/>
             </LinearLayout>
             <Button
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2mm"
                 android:text="="
-                android:textSize="10mm" />
+                android:textSize="40sp" />
 
             <EditText
                 android:layout_width="match_parent"

@@ -25,14 +25,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:text="Z1=" />
                 <EditText
                     android:id="@+id/txtCZ1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:hint="#"
                     android:text="1"
                     android:inputType="numberSigned|numberDecimal"/>
@@ -40,14 +40,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="80sp"
+                    android:textSize="65sp"
                     android:text="("/>
                 <EditText
                     android:id="@+id/Z1A"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:inputType="numberSigned|numberDecimal"
                     android:hint="#" />
                 <EditText
@@ -56,14 +56,14 @@
                     android:layout_width="wrap_content"
                     android:textStyle="bold"
                     android:layout_height="wrap_content"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:inputType="numberSigned|numberDecimal"
                     android:hint="#" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:textStyle="bold"
                     android:layout_height="wrap_content"
-                    android:textSize="80sp"
+                    android:textSize="65sp"
                     android:text="i )"/>
             </LinearLayout>
             <LinearLayout
@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="55sp"
+                    android:textSize="45sp"
                     android:layout_margin="2mm"
                     android:text="Operación:"/>
 
@@ -92,14 +92,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:text="Z2=" />
                 <EditText
                     android:id="@+id/CZ2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:hint="#"
                     android:text="1"
                     android:inputType="numberSigned|numberDecimal"/>
@@ -108,21 +108,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="("
-                    android:textSize="80sp"
+                    android:textSize="65sp"
                     android:textStyle="bold" />
                 <EditText
                     android:id="@+id/Z2A"
                     android:layout_width="wrap_content"
                     android:textStyle="bold"
                     android:layout_height="wrap_content"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:inputType="numberSigned|numberDecimal"
                     android:hint="#" />
                 <EditText
                     android:id="@+id/Z2i"
                     android:layout_width="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned|numberDecimal"
                     android:layout_marginLeft="2mm"
@@ -131,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="80sp"
+                    android:textSize="65sp"
                     android:text="i )"/>
             </LinearLayout>
 
@@ -139,8 +139,8 @@
                 android:id="@+id/btnResultado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="30dp"
-                android:layout_margin="4mm"
+                android:textSize="35dp"
+                android:layout_margin="10dp"
                 android:text="="/>
             <EditText
                 android:layout_width="match_parent"
@@ -153,7 +153,7 @@
                 android:enabled="false"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 android:textStyle="bold"
                 />
         </LinearLayout>

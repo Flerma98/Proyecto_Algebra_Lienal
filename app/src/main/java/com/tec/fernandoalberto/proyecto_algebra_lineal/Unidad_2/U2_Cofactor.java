@@ -14,6 +14,7 @@ import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosResultados;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosTabla;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_4.U4_Producto_Interno;
 
 import java.util.ArrayList;
 
@@ -42,6 +43,7 @@ public class U2_Cofactor extends AppCompatActivity {
             public void onClick(View view) {
                 if (txtFilas.getText().toString().length() == 0 || txtColumnas.getText().toString().length() == 0 || Integer.parseInt(txtFilas.getText().toString())!=Integer.parseInt(txtColumnas.getText().toString())) {
                     btnObtener.setEnabled(false);
+                    Toast.makeText(U2_Cofactor.this, "Campos No Validos", Toast.LENGTH_SHORT).show();
                 } else {
                     btnObtener.setEnabled(true);
                     filas = Integer.parseInt(txtFilas.getText().toString());

@@ -14,6 +14,7 @@ import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosResultados;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosTabla;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.MainActivity;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_4.U4_Producto_Interno;
 
 import java.util.ArrayList;
 
@@ -42,6 +43,7 @@ public class U2_Adjunta extends AppCompatActivity {
             public void onClick(View view) {
                 if (txtFilas.getText().toString().length() == 0 || txtColumnas.getText().toString().length() == 0) {
                     btnObtener.setEnabled(false);
+                    Toast.makeText(U2_Adjunta.this, "Campos no validos", Toast.LENGTH_SHORT).show();
                 } else {
                     btnObtener.setEnabled(true);
                     filas = Integer.parseInt(txtFilas.getText().toString());
@@ -67,8 +69,8 @@ public class U2_Adjunta extends AppCompatActivity {
                 String[][] result = adapter.getData();
                 double[][] matriz = new double[result.length][result[0].length];
 
-                for (int i = 0; i < result.length; i++) {
-                    for (int j = 0; j < result.length; j++) {
+                for (int i = 0; i < filas; i++) {
+                    for (int j = 0; j < columnas; j++) {
                         ConstraintLayout rootView = (ConstraintLayout) recycler1.getChildAt(contador++);
                         matriz[i][j] = Double.parseDouble(((EditText) rootView.findViewById(R.id.txtListaRecycler)).getText().toString());
                     }

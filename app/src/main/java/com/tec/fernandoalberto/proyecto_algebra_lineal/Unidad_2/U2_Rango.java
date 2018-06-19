@@ -41,6 +41,7 @@ public class U2_Rango extends AppCompatActivity {
                 txtResultado.setText("");
                 if(txtFilas.getText().toString().length()==0 || txtColumnas.getText().toString().length()==0 || Integer.parseInt(txtFilas.getText().toString())!=Integer.parseInt(txtColumnas.getText().toString())){
                     btnObtener.setEnabled(false);
+                    Toast.makeText(U2_Rango.this, "Campos no validos", Toast.LENGTH_SHORT).show();
                 }else{
                     btnObtener.setEnabled(true);
                     filas= Integer.parseInt(txtFilas.getText().toString());
@@ -64,8 +65,8 @@ public class U2_Rango extends AppCompatActivity {
                 int contador = 0;
                 String[][] result = adapter.getData();
                 double[][] matriz = new double[result.length][result[0].length];
-                for (int i = 0; i < result.length; i++) {
-                    for (int j = 0; j < result.length; j++) {
+                for (int i = 0; i < filas; i++) {
+                    for (int j = 0; j < columnas; j++) {
                         ConstraintLayout rootView = (ConstraintLayout) recycler1.getChildAt(contador++);
                         matriz[i][j] = Double.parseDouble(((EditText)rootView.findViewById(R.id.txtListaRecycler)).getText().toString());
                     }

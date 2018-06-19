@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Unidad_2.U2_Adjunta">
+    tools:context=".Unidad_4.U4_Base">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:text="Filas="/>
 
             <EditText
-                android:id="@+id/txtADJUNTAFila"
+                android:id="@+id/txtBASEFila"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColorHint="#878787"
@@ -48,7 +48,7 @@
                 android:text="Columnas="/>
 
             <EditText
-                android:id="@+id/txtADJUNTAColumna"
+                android:id="@+id/txtBASEColumna"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColorHint="#878787"
@@ -58,48 +58,46 @@
                 android:maxLength="2"
                 android:hint="#"/>
 
-
         </LinearLayout>
 
         <Button
             android:layout_marginBottom="15dp"
             android:layout_marginHorizontal="10dp"
-            android:id="@+id/btnADJUNTACrear"
+            android:id="@+id/btnBASECrear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Crear"
             android:textAllCaps="false"/>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/ADJUNTARecycler"
+            android:id="@+id/BASERecycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Button
             android:layout_marginLeft="10dp"
-            android:id="@+id/btnADJUNTAObtener"
+            android:id="@+id/btnObtenerBASE"
             android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:enabled="false"
-            android:text="Calcular Adjunta"
+            android:text="Calcular Base"
             android:textAllCaps="false"/>
 
-        <TextView
+        <EditText
+            android:id="@+id/txtResultadoBASE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000000"
-            android:text="Adjunta"
+            android:layout_margin="2mm"
+            android:background="#154011"
+            android:enabled="false"
+            android:hint="Base"
+            android:textAlignment="center"
             android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
             android:textStyle="bold"
-            android:textSize="30sp"
-            android:textAlignment="center"/>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/ADJUNTARESULTADORecycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="50sp" />
 
     </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2;
+package com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_4;
 
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -15,49 +15,50 @@ import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
 
 import java.util.ArrayList;
 
-public class U2_Determinante extends AppCompatActivity {
+public class U4_Dimension extends AppCompatActivity {
 
     private ArrayList<String> listaDatos;
     private RecyclerView recycler1;
-    private EditText txtFilas, txtColumnas, txtResultado;
+    private EditText txtFilas, txtColumnas, txtDimension, txtResultado;
     private AdapterDatosTabla adapter;
     private Button btnCrear, btnObtener;
-    private int filas, columnas, cuadricula;
+    private int filas, columnas, dimension, cuadricula;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u2__determinante);
-        txtFilas= findViewById(R.id.txtDETERMIANNTEFila);
-        txtColumnas= findViewById(R.id.txtDETERMIANNTEColumna);
-        btnCrear= findViewById(R.id.btnDETERMIANNTECrear);
-        btnObtener= findViewById(R.id.btnObtenerDETERMIANNTE);
-        recycler1= findViewById(R.id.DETERMIANNTERecycler);
-        txtResultado= findViewById(R.id.txtResultadoDETERMIANNTE);
+        setContentView(R.layout.activity_u4__dimension);
+        txtFilas= findViewById(R.id.txtDIMENSIONFila);
+        txtColumnas= findViewById(R.id.txtDIMENSIONColumna);
+        txtDimension= findViewById(R.id.txtDIMENSIONdimension);
+        btnCrear= findViewById(R.id.btnDIMENSIONCrear);
+        btnObtener= findViewById(R.id.btnObtenerDIMENSION);
+        recycler1= findViewById(R.id.DIMENSIONRecycler);
+        txtResultado= findViewById(R.id.txtResultadoDIMENSION);
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 txtResultado.setText("");
-                if(txtFilas.getText().toString().length()==0 || txtColumnas.getText().toString().length()==0 || Integer.parseInt(txtFilas.getText().toString())!=Integer.parseInt(txtColumnas.getText().toString())){
+                if (txtFilas.getText().toString().length() == 0 || txtColumnas.getText().toString().length() == 0 || txtDimension.getText().toString().length() == 0 || Integer.parseInt(txtFilas.getText().toString()) != Integer.parseInt(txtColumnas.getText().toString())) {
                     btnObtener.setEnabled(false);
-                    Toast.makeText(U2_Determinante.this, "Campos no validos", Toast.LENGTH_SHORT).show();
-                }else{
+                    Toast.makeText(U4_Dimension.this, "Campos no validos", Toast.LENGTH_SHORT).show();
+                } else {
                     btnObtener.setEnabled(true);
-                    filas= Integer.parseInt(txtFilas.getText().toString());
-                    columnas= Integer.parseInt(txtColumnas.getText().toString());
-                    cuadricula= filas * columnas;
-                    listaDatos= new ArrayList<>();
-                    for (int i=0; i<cuadricula; i++){
+                    filas = Integer.parseInt(txtFilas.getText().toString());
+                    columnas = Integer.parseInt(txtColumnas.getText().toString());
+                    dimension= Integer.parseInt(txtDimension.getText().toString());
+                    cuadricula = filas * columnas;
+                    listaDatos = new ArrayList<>();
+                    for (int i = 0; i < cuadricula; i++) {
                         listaDatos.add("");
                     }
-                    recycler1.setLayoutManager(new GridLayoutManager(U2_Determinante.this, columnas));
-                    adapter= new AdapterDatosTabla(listaDatos, filas, columnas);
+                    recycler1.setLayoutManager(new GridLayoutManager(U4_Dimension.this, columnas));
+                    adapter = new AdapterDatosTabla(listaDatos, filas, columnas);
                     recycler1.setAdapter(adapter);
 
                 }
             }
         });
-
         btnObtener.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,10 +73,11 @@ public class U2_Determinante extends AppCompatActivity {
                 }
                 try {
                     Jama.Matrix matrix = new Jama.Matrix(matriz);
-                    double determinante= matrix.det();
-                    txtResultado.setText(determinante + "");
+                    int rango= matrix.rank();
+                    int dim= dimension-rango;
+                    txtResultado.setText(dim);
                 }catch (Exception e){
-                    Toast.makeText(U2_Determinante.this, "No se puede calcular esta matriz", Toast.LENGTH_SHORT).show();}
+                    Toast.makeText(U4_Dimension.this, "No se puede calcular esta matriz", Toast.LENGTH_SHORT).show();}
             }
         });
     }

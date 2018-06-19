@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Unidad_4.U4_Producto_Interno">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="U={("
+            android:textStyle="bold"
+            android:textSize="45sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/txtX1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:inputType="numberDecimal|numberSigned"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:hint="#"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=","
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/txtX2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:hint="#"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=");("
+            android:textStyle="bold"
+            android:textSize="45sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/txtZ1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:inputType="numberDecimal|numberSigned"
+            android:textStyle="bold"
+            android:hint="#"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=","
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/txtZ2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"
+            android:hint="#"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=")}"
+            android:textStyle="bold"
+            android:textSize="45sp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCalcularU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="Calcular"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/txtY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Y"
+            android:enabled="false"
+            android:textStyle="bold"
+            android:textSize="60sp"
+            android:background="#763030"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/txtRESY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Resultado"
+            android:background="#763030"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

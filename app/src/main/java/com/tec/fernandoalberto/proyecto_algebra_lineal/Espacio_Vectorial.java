@@ -1,8 +1,6 @@
 package com.tec.fernandoalberto.proyecto_algebra_lineal;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,19 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatostxt;
-import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
-import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Adjunta;
-import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Cofactor;
-import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Determinante;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Inversa;
-import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Menores;
-import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Operaciones_Matrices;
-import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Rango;
-import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Transpuesta;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_4.U4_Base;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_4.U4_Combinacion_Lineal;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_4.U4_Dimension;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_4.U4_Independencia_Lineal;
+import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_4.U4_Producto_Interno;
 
 import java.util.ArrayList;
 
@@ -53,16 +45,16 @@ public class Espacio_Vectorial extends Fragment {
                         startActivity(new Intent(getActivity(), U4_Independencia_Lineal.class));
                         break;
                     case "Combinación Lineal":
-                        startActivity(new Intent(getActivity(), U2_Transpuesta.class));
+                        startActivity(new Intent(getActivity(), U4_Combinacion_Lineal.class));
                         break;
                     case "Base de una Matriz":
-                        startActivity(new Intent(getActivity(), U2_Rango.class));
+                        startActivity(new Intent(getActivity(), U4_Base.class));
                         break;
                     case "Dimensión de una Matríz":
-                        startActivity(new Intent(getActivity(), U2_Inversa.class));
+                        startActivity(new Intent(getActivity(), U4_Dimension.class));
                         break;
                     case "Producto Interno":
-                        startActivity(new Intent(getActivity(), U2_Determinante.class));
+                        startActivity(new Intent(getActivity(), U4_Producto_Interno.class));
                         break;
                 }
             }

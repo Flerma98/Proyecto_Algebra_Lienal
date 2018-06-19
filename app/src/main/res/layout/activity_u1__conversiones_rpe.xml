@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="100sp"
+                    android:textSize="80sp"
                     android:text="["/>
 
                 <TextView
@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:layout_marginRight="2mm"
                     android:inputType="numberSigned|numberDecimal"
                     android:hint="#" />
@@ -67,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:inputType="numberSigned|numberDecimal"
                     android:hint="#" />
 
@@ -76,14 +76,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textSize="80sp"
+                    android:textSize="60sp"
                     android:text="i" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/llavecerrada"
                     android:textStyle="bold"
-                    android:textSize="100sp"
+                    android:textSize="80sp"
                     android:text="]"/>
             </LinearLayout>
             <Button
@@ -92,8 +92,8 @@
                 android:layout_height="wrap_content"
                 android:text="Convertir"
                 android:textAllCaps="false"
-                android:textSize="5mm"
-                android:layout_margin="2mm"
+                android:textSize="30sp"
+                android:layout_margin="5dp"
                 android:enabled="false"/>
             <EditText
                 android:layout_width="match_parent"
@@ -101,12 +101,12 @@
                 android:id="@+id/txtResultadoREC"
                 android:hint="Rectangular"
                 android:textAlignment="center"
-                android:layout_margin="2mm"
+                android:layout_margin="8dp"
                 android:background="#ff9999"
                 android:enabled="false"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 android:textStyle="bold"
                 />
             <EditText
@@ -115,12 +115,12 @@
                 android:id="@+id/txtResultadoPOL"
                 android:hint="Polar"
                 android:textAlignment="center"
-                android:layout_margin="2mm"
+                android:layout_margin="8dp"
                 android:background="#51008e"
                 android:enabled="false"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 android:textStyle="bold"
                 />
             <EditText
@@ -129,12 +129,12 @@
                 android:id="@+id/txtResultadoEXP"
                 android:hint="Exponencial"
                 android:textAlignment="center"
-                android:layout_margin="2mm"
+                android:layout_margin="8dp"
                 android:background="#000000"
                 android:enabled="false"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 android:textStyle="bold"
                 />
         </LinearLayout>

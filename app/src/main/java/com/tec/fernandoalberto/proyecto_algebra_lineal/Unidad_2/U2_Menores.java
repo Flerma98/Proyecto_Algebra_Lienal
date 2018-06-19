@@ -42,6 +42,7 @@ public class U2_Menores extends AppCompatActivity {
             public void onClick(View view) {
                 if (txtFilas.getText().toString().length() == 0 || txtColumnas.getText().toString().length() == 0 || Integer.parseInt(txtFilas.getText().toString())!=Integer.parseInt(txtColumnas.getText().toString())) {
                     btnObtener.setEnabled(false);
+                    Toast.makeText(U2_Menores.this, "Campos no validos", Toast.LENGTH_SHORT).show();
                 } else {
                     btnObtener.setEnabled(true);
                     filas = Integer.parseInt(txtFilas.getText().toString());

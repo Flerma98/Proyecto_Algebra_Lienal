@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Unidad_2.U2_Operaciones_Matrices">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,15 +58,16 @@
             android:maxLength="2"
             android:hint="#"/>
 
+    </LinearLayout>
+
         <Button
-            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="10dp"
             android:id="@+id/btnOPE1Crear"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Crear"
             android:textAllCaps="false"/>
-
-    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/OPE1Recycler"
@@ -116,15 +122,26 @@
                 android:maxLength="2"
                 android:hint="#"/>
 
-            <Button
-                android:layout_marginLeft="10dp"
-                android:id="@+id/btnOPE2Crear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Crear"
-                android:textAllCaps="false"/>
-
         </LinearLayout>
+
+        <Button
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/btnOPE2Crear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:text="Operación Resueta"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textAlignment="center"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/OPE2Recycler"
@@ -148,5 +165,7 @@
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

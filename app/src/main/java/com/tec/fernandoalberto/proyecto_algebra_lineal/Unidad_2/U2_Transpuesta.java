@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosResultados;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosTabla;
@@ -41,6 +42,7 @@ public class U2_Transpuesta extends AppCompatActivity {
             public void onClick(View view) {
                 if(txtFilas.getText().toString().length()==0 || txtColumnas.getText().toString().length()==0){
                     btnObtener.setEnabled(false);
+                    Toast.makeText(U2_Transpuesta.this, "Campos no validos", Toast.LENGTH_SHORT).show();
                 }else{
                     btnObtener.setEnabled(true);
                     filas= Integer.parseInt(txtFilas.getText().toString());

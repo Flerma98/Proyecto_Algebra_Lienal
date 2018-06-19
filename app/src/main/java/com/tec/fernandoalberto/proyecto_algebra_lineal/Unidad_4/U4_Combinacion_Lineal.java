@@ -12,16 +12,15 @@ import android.widget.Toast;
 
 import com.tec.fernandoalberto.proyecto_algebra_lineal.AdapterDatosTabla;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.R;
-import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Operaciones_Matrices;
 import com.tec.fernandoalberto.proyecto_algebra_lineal.Unidad_2.U2_Rango;
 
 import java.util.ArrayList;
 
-public class U4_Independencia_Lineal extends AppCompatActivity {
+public class U4_Combinacion_Lineal extends AppCompatActivity {
 
     private ArrayList<String> listaDatos;
     private RecyclerView recycler1;
-    private EditText txtFilas, txtColumnas, txtResultado;
+    private EditText txtFilas, txtResultado;
     private AdapterDatosTabla adapter;
     private Button btnCrear, btnObtener;
     private int filas, columnas, cuadricula;
@@ -29,30 +28,29 @@ public class U4_Independencia_Lineal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_u4__independencia__lineal);
-        txtFilas= findViewById(R.id.txtINDLINFila);
-        txtColumnas= findViewById(R.id.txtINDLINColumna);
-        btnCrear= findViewById(R.id.btnINDLINCrear);
-        btnObtener= findViewById(R.id.btnObtenerINDLIN);
-        recycler1= findViewById(R.id.INDLINRecycler);
-        txtResultado= findViewById(R.id.txtResultadoINDLIN);
+        setContentView(R.layout.activity_u4__combinacion__lineal);
+        txtFilas= findViewById(R.id.txtCOMBINACIONFila);
+        btnCrear= findViewById(R.id.btnCOMBINACIONCrear);
+        btnObtener= findViewById(R.id.btnObtenerCOMBINACION);
+        recycler1= findViewById(R.id.COMBINACIONRecycler);
+        txtResultado= findViewById(R.id.txtResultadoCOMBINACION);
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 txtResultado.setText("");
-                if(txtFilas.getText().toString().length()==0 || txtColumnas.getText().toString().length()==0 || Integer.parseInt(txtFilas.getText().toString())!=Integer.parseInt(txtColumnas.getText().toString())){
+                if(txtFilas.getText().toString().length()==0){
                     btnObtener.setEnabled(false);
-                    Toast.makeText(U4_Independencia_Lineal.this, "Campos no validos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(U4_Combinacion_Lineal.this, "Campos no validos", Toast.LENGTH_SHORT).show();
                 }else{
                     btnObtener.setEnabled(true);
                     filas= Integer.parseInt(txtFilas.getText().toString());
-                    columnas= Integer.parseInt(txtColumnas.getText().toString());
+                    columnas= filas+1;
                     cuadricula= filas * columnas;
                     listaDatos= new ArrayList<>();
                     for (int i=0; i<cuadricula; i++){
                         listaDatos.add("");
                     }
-                    recycler1.setLayoutManager(new GridLayoutManager(U4_Independencia_Lineal.this, columnas));
+                    recycler1.setLayoutManager(new GridLayoutManager(U4_Combinacion_Lineal.this, columnas));
                     adapter= new AdapterDatosTabla(listaDatos, filas, columnas);
                     recycler1.setAdapter(adapter);
 
@@ -65,9 +63,9 @@ public class U4_Independencia_Lineal extends AppCompatActivity {
             public void onClick(View view) {
                 int contador = 0;
                 String[][] result = adapter.getData();
-                double[][] matriz = new double[result.length][result[0].length];
-                for (int i = 0; i < result.length; i++) {
-                    for (int j = 0; j < result.length; j++) {
+                double[][] matriz = new double[filas][filas];
+                for (int i = 0; i < filas; i++) {
+                    for (int j = 0; j < filas; j++) {
                         ConstraintLayout rootView = (ConstraintLayout) recycler1.getChildAt(contador++);
                         matriz[i][j] = Double.parseDouble(((EditText)rootView.findViewById(R.id.txtListaRecycler)).getText().toString());
                     }
@@ -75,13 +73,14 @@ public class U4_Independencia_Lineal extends AppCompatActivity {
                 try {
                     Jama.Matrix matrix = new Jama.Matrix(matriz);
                     int rango= matrix.rank();
-                    if(rango==result.length){
-                        txtResultado.setText("Linealmente Independiente");
+                    if(rango==filas){
+                        txtResultado.setText("Combinación Lineal");
                     }else{
-                        txtResultado.setText("Linealmente Dependiente");
+                        txtResultado.setText("No es Combinación Lineal");
                     }
+
                 }catch (Exception e){
-                    Toast.makeText(U4_Independencia_Lineal.this, "No se puede calcular esta matriz", Toast.LENGTH_SHORT).show();}
+                    Toast.makeText(U4_Combinacion_Lineal.this, "No se puede calcular esta matriz", Toast.LENGTH_SHORT).show();}
             }
         });
     }
